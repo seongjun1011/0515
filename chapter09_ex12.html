@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var radius = 20;
-        var height = 40;
+        function cylinderVolume(r, h){
+            return Math.round(Math.PI*r*r*h) + "㎤"
+        }
 
-        var volume = Math.PI * Math.pow(radius, 2) * height;
+        var r = parseInt(prompt("* 원의 반지름 입력:", "입력"));
+        var height = parseInt(prompt("* 원기둥의 높이 입력:", "입력"));
 
-        alert("원기둥의 부피는: " + volume.toFixed(2));
+        alert(cylinderVolume(r, height));
     </script>
 </head>
 <body>
